@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Project1Portfolio.Controllers
+namespace MvcCv.Controllers
 {
     public class HomeController : Controller
     {
@@ -24,6 +24,11 @@ namespace Project1Portfolio.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult Test()
+        {
             return View();
         }
     }
