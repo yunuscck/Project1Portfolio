@@ -314,6 +314,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Admin\PartialHead.cshtml" />
+    <Content Include="Views\Admin\PartialSideBar.cshtml" />
+    <Content Include="Views\Admin\PartialNavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

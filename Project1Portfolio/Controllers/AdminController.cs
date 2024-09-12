@@ -8,10 +8,21 @@ namespace MvcCv.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
         public ActionResult Index()
         {
             return View();
+        }
+        public PartialViewResult PartialHead()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialSideBar()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialNavBar()
+        {
+            return PartialView();
         }
     }
 }
