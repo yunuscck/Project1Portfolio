@@ -1,0 +1,22 @@
+﻿@model Project1Portfolio.Models.Work
+
+@{
+    ViewBag.Title = "CreateWork";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Yeni Çalışma Girişi</h2>
+<form method="post">
+
+    <label>Çalışma Başlığı</label>
+    <input type="text" class="form-control" required maxlength="50" name="Title" />
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, 6, 1, new { @class = "form-control" })
+    <br />
+    <label>Github</label>
+    <input type="text" class="form-control" name="GithubUrl" />
+    <br />
+
+    <button class="btn btn-info">Çalışmayı Oluştur</button>
+</form>

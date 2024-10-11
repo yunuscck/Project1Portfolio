@@ -1,0 +1,42 @@
+﻿@model Project1Portfolio.Models.Profile
+
+@{
+    ViewBag.Title = "UpdateProfile";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Profili Güncelle</h2>
+<form method="post">
+    <input name="ProfileId" id="ProfileId" type="hidden" class="form-control" value="@Model.ProfileId"/>
+
+    <label>İsim</label>
+    <input name="Title" id="Title" type="text" class="form-control" value="@Model.Title" required maxlength="50" />
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, 6, 1, new { @class = "form-control", @name = "Description" })
+    <br />
+    <label>Adres</label>
+    @Html.TextAreaFor(x => x.Adress, 6, 1, new { @class = "form-control", @name = "Adress" })
+    <br />
+    <label>E-Mail</label>
+    <input name="Email" id="Email" type="text" class="form-control" value="@Model.Email" required maxlength="50" />
+    <br />
+    <label>Telefon</label>
+    <input name="PhoneNumber" id="PhoneNumber" type="text" class="form-control" value="@Model.PhoneNumber" required maxlength="50" />
+    <br />
+    <label>Github</label>
+    <input name="Github" id="Github" type="text" class="form-control" value="@Model.Github" required maxlength="50" />
+    <br />
+    <label>Profil Fotoğrafı</label>
+    <input name="ImageUrl" id="ImageUrl" type="file" class="form-control mb-1" contextmenu="@Model.ImageUrl" value="@Model.ImageUrl" required />
+    <span id="fileName">@Model.ImageUrl</span>
+    <br />
+    <button class="btn btn-info mt-5">Güncelle</button>
+</form>
+
+<script>
+    document.getElementById('ImageUrl').addEventListener('change', function () {
+        var fileName = this.files[0] ? this.files[0].name : '';
+        document.getElementById('fileName').textContent = fileName;
+    });
+</script>

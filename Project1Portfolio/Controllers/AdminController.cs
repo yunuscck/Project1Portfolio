@@ -20,7 +20,7 @@ namespace MvcCv.Controllers
         }
         public PartialViewResult PartialSideBar()
         {
-            ViewBag.imageUrl=context.About.Select(x=>x.ImageUrl).FirstOrDefault();
+            ViewBag.imageUrl=context.Profile.Select(x=>x.ImageUrl).FirstOrDefault();
             return PartialView();
         }
         public PartialViewResult PartialNavBar()

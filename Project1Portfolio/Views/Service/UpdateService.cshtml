@@ -1,0 +1,19 @@
+﻿@model Project1Portfolio.Models.Service
+
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Hizmeti Güncelle</h2>
+<form method="post">
+    <input name="ServiceId" id="ServiceId" type="hidden" class="form-control" value="@Model.ServiceId" />
+
+    <label>İsim</label>
+    <input name="Title" id="Title" type="text" class="form-control" value="@Model.Title" required maxlength="50" />
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, 6, 1, new { @class = "form-control", @name = "Description" })
+    <br />
+    <button class="btn btn-info mt-5">Güncelle</button>
+</form>

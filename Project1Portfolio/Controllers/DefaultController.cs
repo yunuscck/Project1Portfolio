@@ -43,7 +43,7 @@ namespace Project1Portfolio.Controllers
         {
             ViewBag.title = context.About.Select(x => x.Title).FirstOrDefault();
             ViewBag.detail = context.About.Select(x => x.Detail).FirstOrDefault();
-            ViewBag.imageUrl = context.About.Select(x => x.ImageUrl).FirstOrDefault();
+            ViewBag.imageUrl = context.Profile.Select(x => x.ImageUrl).FirstOrDefault();
 
             ViewBag.adress = context.Profile.Select(x => x.Adress).FirstOrDefault();
             ViewBag.email = context.Profile.Select(x => x.Email).FirstOrDefault();
@@ -57,7 +57,7 @@ namespace Project1Portfolio.Controllers
             ViewBag.description = context.Profile.Select(x => x.Description).FirstOrDefault();
             ViewBag.phone = context.Profile.Select(x => x.PhoneNumber).FirstOrDefault();
             ViewBag.email = context.Profile.Select(x => x.Email).FirstOrDefault();
-            ViewBag.imageUrl = context.Profile.Select(x => x.ImageUrl).FirstOrDefault();
+            ViewBag.imageUrl = context.About.Select(x => x.ImageUrl).FirstOrDefault();
             return PartialView();
         }
         public PartialViewResult PartialEducation()

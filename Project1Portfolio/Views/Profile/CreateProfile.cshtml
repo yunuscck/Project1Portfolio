@@ -1,0 +1,33 @@
+﻿@model Project1Portfolio.Models.Profile
+
+@{
+    ViewBag.Title = "CreateProfile";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Yeni Profil Girişi</h2>
+<form method="post">
+
+    <label>İsim</label>
+    <input name="Title" type="text" class="form-control" required maxlength="50" />
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, 6, 1, new { @class = "form-control", @name = "Description" })
+    <br />
+    <label>Adres</label>
+    @Html.TextAreaFor(x => x.Adress, 6, 1, new { @class = "form-control", @name = "Adress" })
+    <br />
+    <label>E-Mail</label>
+    <input name="Email" type="text" class="form-control" required maxlength="50" />
+    <br />
+    <label>Telefon</label>
+    <input name="PhoneNumber" type="text" class="form-control" required maxlength="50" />
+    <br />
+    <label>Github</label>
+    <input name="Github" type="text" class="form-control" required maxlength="50" />
+    <br />
+    <label>Profil Fotoğrafı</label>
+    <input name="ImageUrl" type="file" class="form-control" required />
+    <br />
+    <button class="btn btn-info">Profili Olustur</button>
+</form>
