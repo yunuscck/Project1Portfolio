@@ -11,17 +11,11 @@ namespace Project1Portfolio.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-    public partial class Experience
+    
+    public partial class Admin
     {
-        public int ExperienceId { get; set; }
-        [Required]
-        public string CompanyName { get; set; }
-        [Required]
-        public string WorkDate { get; set; }
-        [Required]
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

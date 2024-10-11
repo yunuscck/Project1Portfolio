@@ -52,6 +52,12 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -136,12 +142,18 @@
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
+    <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
+    <Compile Include="Extension\StringExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\About.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
@@ -211,6 +223,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\Pigra-1.0.0\Pigra-1.0.0\css\bootstrap.min.css" />
     <Content Include="Content\Pigra-1.0.0\Pigra-1.0.0\css\style.css" />
     <Content Include="Content\Pigra-1.0.0\Pigra-1.0.0\img\about.jpg" />
@@ -493,6 +506,7 @@
     <Content Include="Content\Pigra-1.0.0\Pigra-1.0.0\scss\bootstrap\scss\_type.scss" />
     <Content Include="Content\Pigra-1.0.0\Pigra-1.0.0\scss\bootstrap\scss\_utilities.scss" />
     <Content Include="Content\Pigra-1.0.0\Pigra-1.0.0\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="Content\yunuscicekcv.pdf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -547,9 +561,18 @@
     <Content Include="Views\Contact\PartialContactSideBar.cshtml" />
     <Content Include="Views\Contact\PartialContactAdress.cshtml" />
     <Content Include="Views\Contact\PartialContactLocation.cshtml" />
+    <Content Include="Views\Default\PartialExperience.cshtml" />
+    <Content Include="Views\Default\PartialService.cshtml" />
+    <Content Include="Views\Default\PartialPortfolio.cshtml" />
+    <Content Include="Views\Default\PartialTestimonial.cshtml" />
+    <Content Include="Views\Settings\Index.cshtml" />
+    <Content Include="Views\Skill\UpdateSkill.cshtml" />
+    <Content Include="Views\Skill\PartialSkillChart.cshtml" />
+    <Content Include="Views\SocialMedia\SocialMediaList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Chart\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -18,6 +18,7 @@
         <EntityTypeShape EntityType="MyPortfolio5DbModel.Work" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
         <AssociationConnector Association="MyPortfolio5DbModel.FK_Message_Category" ManuallyRouted="false" />
         <EntityTypeShape EntityType="MyPortfolio5DbModel.SocialMedia" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MyPortfolio5DbModel.Admin" Width="1.5" PointX="8.5" PointY="3.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

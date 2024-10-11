@@ -79,8 +79,26 @@ namespace Project1Portfolio.Controllers
             var values = context.SocialMedia.Where(x => x.Status == true).ToList();
             return PartialView(values);
         }
-
-
+        public PartialViewResult PartialExperience()
+        {
+            var values = context.Experience.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialService()
+        {
+            var values = context.Service.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialPortfolio()
+        {
+            var values = context.Work.ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult PartialTestimonial()
+        {
+            var values = context.Testimonial.ToList();
+            return PartialView(values);
+        }
 
 
     }

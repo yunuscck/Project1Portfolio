@@ -1,4 +1,5 @@
-﻿@model List<Project1Portfolio.Models.Message>
+﻿@using Project1Portfolio.Extension
+@model List<Project1Portfolio.Models.Message>
 
 @{
     ViewBag.Title = "Inbox";
@@ -6,6 +7,36 @@
 }
 
 <h2 class="mb-4">Gelen Mesajlar</h2>
+
+<style>
+    .tesekkur {
+        background-color: #f2f2f2; /* Açık gri */
+    }
+
+    .proje-talebi {
+        background-color: #d9edf7; /* Açık mavi */
+    }
+
+    .sikayet {
+        background-color: #dff0d8; /* Açık yeşil */
+    }
+
+    .oneri {
+        background-color: #fff3cd; /* Açık sarı */
+    }
+
+    .kutlama {
+        background-color: #f9e79f; /* Sarı */
+    }
+
+    .diger {
+        background-color: #f5b7b1; /* Açık kırmızı */
+    }
+
+    .ornek {
+        background-color: #c2d6e8; /* Açık mavi gri */
+    }
+</style>
 
 <table class="table table-bordered">
     <tr>
@@ -25,7 +56,7 @@
             <td>@item.Name</td>
             <td>@item.Subject</td>
             <td>@item.SendDate</td>
-            <td>@item.Category.CategoryName</td>
+            <td class="@item.Category.CategoryName.ToLower().ConvertTurkishCharacters()">@item.Category.CategoryName</td>
             @if (item.IsRead == false)
             {
                 <td><a href="/Message/MessageStatusChangeToTrue/@item.MessageId" class="btn btn-info">Okundu Olarak İşaretle</a></td>

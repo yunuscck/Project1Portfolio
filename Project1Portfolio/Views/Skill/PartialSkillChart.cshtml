@@ -1,0 +1,51 @@
+﻿@model List<Project1Portfolio.Models.Skill>
+
+@{
+    ViewBag.Title = "Sales Chart";
+    var skillName = new List<string>();
+    var skillValue = new List<byte?>();
+    foreach (var item in Model)
+    {
+        skillName.Add(item.Title);
+        skillValue.Add(item.Value);
+    }
+
+
+}
+
+
+
+
+
+<h2>Ürün Satış Grafiği</h2>
+
+<canvas id="salesChart" width="400" height="200"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('salesChart').getContext('2d');
+
+    var productNames = @Html.Raw(Json.Encode(skillName));
+    var productSales = @Html.Raw(Json.Encode(skillValue));
+
+    var salesChart = new Chart(ctx, {
+        type: 'bar', // Bar chart tipi
+        data: {
+            labels: productNames, // Ürün isimleri
+            datasets: [{
+                label: 'Yetenek Puanı',
+                data: productSales, // Satış miktarları
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

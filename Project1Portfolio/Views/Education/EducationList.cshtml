@@ -1,8 +1,32 @@
-﻿
+﻿@model List<Project1Portfolio.Models.Education>
+
 @{
     ViewBag.Title = "EducationList";
     Layout = "~/Views/Admin/Index.cshtml";
 }
 
-<h2>EducationList</h2>
+<h2 class="mb-4">Eğitim Hayatım</h2>
+Buraya Eğitim Hayatım Gelecek
 
+<table class=" table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Bölüm</th>
+        <th>Mezuniyet</th>
+        <th>Okul</th>
+        <th>Açıklama</th>      
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EducationId</td>
+            <td>@item.Title</td>
+            <td>@item.EducationDate</td>
+            <td>@item.Subtitle</td>
+            <td>@item.Description</td>
+            
+        </tr>
+    }
+
+</table>

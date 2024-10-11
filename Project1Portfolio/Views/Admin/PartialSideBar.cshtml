@@ -1,10 +1,12 @@
-﻿<nav id="sidebar">
+﻿@model Project1Portfolio.Models.About
+<nav id="sidebar">
     <div class="p-4 pt-5">
-        <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/Content/sidebar-01/images/logo.jpg);"></a>
+        <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(@ViewBag.imageUrl);"></a>
         <ul class="list-unstyled components mb-5">
             <li><a href="#">Hakkımda</a></li>
             <li><a href="#">Kategoriler</a></li>
-            <li><a href="#">Eğitim Hayatım</a></li>
+            <li><a href="/Education/EducationList/">Eğitim Hayatım</a></li>
+            <li><a href="/SocialMedia/SocialMediaList">Sosyal Medya</a></li>
             <li><a href="/Experience/ExperienceList/">Deneyimlerim</a></li>
             <li><a href="/Message/Inbox/">Gelen Mesajlar</a></li>
             <li><a href="#">Profilim</a></li>
@@ -12,7 +14,8 @@
             <li><a href="/Skill/SkillList/">Yeteneklerim</a></li>
             <li><a href="#">Refaranslar</a></li>
             <li><a href="#">Çalışmalarım</a></li>
-            <li><a href="#">Ayarlar</a></li>
+            <li><a href="/Statistics">İstatistikler</a></li>
+            <li><a href="/Settings/Index/">Ayarlar</a></li>
             <li><a href="#">Çıkış</a></li>
         </ul>
 
